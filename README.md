@@ -211,6 +211,6 @@ Double click the tutorial Jupyter Notebook `call_API.ipynb` in the left panel to
 
 
 ### Delete Intance 
-After you're done with your instance, make sure you go back to the Instance Console and click the 'Delete' button. Otherwise, you'll keep burning your credits.
+After you're done with your instance, make sure you go back to the Instances tab and click the "Delete" button. Otherwise, you'll keep burning your credits. The Instances tab shows all of your running instances.
 
 
