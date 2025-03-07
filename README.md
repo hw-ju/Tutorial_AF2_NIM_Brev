@@ -142,9 +142,9 @@ In your local terminal where you installed Brev CLI:
     ```
     docker pull nvcr.io/nim/deepmind/alphafold2:2.1.0
     ```
-    <img src="images/docker_pull.png" alt="Alt text" width="500">
-    When it's done, you should see:
-    <img src="images/docker_pull_done.png" alt="Alt text" width="500">
+    <img src="images/docker_pull.png" alt="Alt text" width="500"> <br>
+    When it's done, you should see: <br>
+    <img src="images/docker_pull_done.png" alt="Alt text" width="500"> <br>
 
 - Set the two environmental variables below one-by-one, which will be passed into the container in the next step.
     ```
