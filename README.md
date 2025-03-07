@@ -1,14 +1,14 @@
 # Tutorial_AF2_NIM_Brev
-A step-by-step tutorial for deploying and using NVIDIA AlphaFold2 NIM on NVIDIA Brev.
+A step-by-step tutorial for deploying and using NVIDIA AlphaFold2 NIM on NVIDIA Brev. <br>
 
-**NOTE**: The first time you run the AF2 NIM container, the APIs will take approximately 3–4 hours to become ready due to the downloading of large databases exceeding 1TB.
+**NOTE**: The first time you run the AF2 NIM container, the APIs will take approximately 3–4 hours to become ready due to the downloading of large databases exceeding 1TB. <br>
 
 This tutorial mainly combines instructions from [Deploying NIMs on Brev](https://docs.nvidia.com/brev/latest/deploying-nims.html) section of the Brev doc and [Quickstart Guide](https://docs.nvidia.com/nim/bionemo/alphafold2/latest/quickstart-guide.html) section of AF2 NIM doc. For more details, please refer to those docs. It is also highly recommended to go through the rest of Brev doc and AF2 NIM doc.
 
 ### Creat Brev Account
 Create an account on Brev if you haven't already. You can do this by clicking the “Create an account” button in the top right corner of the [Brev Console](https://console.brev.dev/org/org-2tcmRZuGMBx9Wlh2bxmuIdGb6UN/environments).
 
-### install Brev CLI
+### Install Brev CLI
 - Follow [Installation Instructions](https://docs.nvidia.com/brev/latest/brev-cli.html#installation-instructions) for Mac, Linux and Windows.
     - Quick setup for Windows. If you don't have WSL2 installed on your Window now, just following this section [Install WSL command](https://learn.microsoft.com/en-us/windows/wsl/install#install-wsl-command) should be enough.
 - You are encouraged to familiarize yourself with the frequently used Brev CLI commands below, since we'll use them in the next steps. Please refer to the [Brev CLI doc](https://docs.nvidia.com/brev/latest/brev-cli.html#) for details.
@@ -22,34 +22,36 @@ Create an account on Brev if you haven't already. You can do this by clicking th
     brev ls
     ``` 
 
-### create launchable & deploy instance
+### Create Launchable & Deploy Instance
+- A "Launchable" is a template of setting up an instance.
 - Open a web browser and go to [Brev Console](https://console.brev.dev/org/org-2tcmRZuGMBx9Wlh2bxmuIdGb6UN/environments).
     - Create an account on Brev if you haven't already. You can do this by clicking the “Create an account” button in the top right corner of the Console.
-    - Click "Launchables" tab in the top menu bar.
-    <img src="images/tab_launchable.png" alt="Alt text" width="500">
-    - Click "Create Launchables".
-    <img src="images/create_launchable.png" alt="Alt text" width="500">
-    - Click "compute" -> "A100" -> "80GiB GPU Memory | 1 GPU • 170GiB RAM • 12 CPUs | GCP • $7.44/hr".
-    <img src="images/config_compute.png" alt="Alt text" width="500">
-    - Type *1500* under "Storage (GiB)", then click "Save Compute".
-    <img src="images/config_storage.png" alt="Alt text" width="500">
-    - Click "Container" -> Toggle the "Prestall Jupyter" switch to turn it on -> Click "VM Mode" box -> "Save Container".
-    <img src="images/config_container.png" alt="Alt text" width="500">
-    - Click "Files" -> Copy & paste the link to the tutorial Jupyter Notebook for calling AF2 NIM APIs - [call_API.ipynb](call_API.ipynb) -> Click "Add file".
-    <img src="images/config_files.png" alt="Alt text" width="500">
-    - Type under "Name Launchable", e.g., *AF2-NIM* -> Click "Generate Launchable". 
-    <img src="images/name_gen_launchable.png" alt="Alt text" width="500">
-    - Click "View Launchable".
-    <img src="images/view_launchable.png" alt="Alt text" width="500">
-    - Click "Deploy Launchable".
-    <img src="images/deploy_launchable.png" alt="Alt text" width="500">
-    - Click "Go to Instance Page" when it becomes available and starts flashing.
-    <img src="images/go_to_instance_page.png" alt="Alt text" width="500">
-    - You should now be on the instance page, as shown below.
-        - It might take a few minutes before you see the 'Running' status and button "Open Notebook" starts flashing.
+    - Click "Launchables" tab in the top menu bar. <br>
+    <img src="images/tab_launchable.png" alt="Alt text" width="500"> <br>
+    - Click "Create Launchables". <br>
+    <img src="images/create_launchable.png" alt="Alt text" width="500"> <br>
+    - Click "compute" -> "A100" -> "80GiB GPU Memory | 1 GPU • 170GiB RAM • 12 CPUs | GCP • $7.44/hr". <br>
+    <img src="images/config_compute.png" alt="Alt text" width="500"> <br>
+    - Type *1500* under "Storage (GiB)", then click "Save Compute". <br>
+    <img src="images/config_storage.png" alt="Alt text" width="500"> <br>
+    - Click "Container" -> Toggle the "Prestall Jupyter" switch to turn it on -> Click "VM Mode" box -> "Save Container". <br>
+    <img src="images/config_container.png" alt="Alt text" width="500"> <br>
+    - Click "Files" -> Copy & paste the link to the tutorial Jupyter Notebook for calling AF2 NIM APIs - [call_API.ipynb](call_API.ipynb) -> Click "Add file". <br>
+    <img src="images/config_files.png" alt="Alt text" width="500"> <br>
+    - Type under "Name Launchable", e.g., *AF2-NIM* -> Click "Generate Launchable". <br> 
+    <img src="images/name_gen_launchable.png" alt="Alt text" width="500"> <br>
+    - Click "View Launchable". <br>
+    **Note that now you can copy & paste the link to this Launchable to share it with your friends, including all configurations such as compute, environment, and Jupyter Notebook, to make your work so much more reproducible.** <br>
+    <img src="images/view_launchable.png" alt="Alt text" width="500"> <br>
+    - Click "Deploy Launchable". <br>
+    <img src="images/deploy_launchable.png" alt="Alt text" width="500"> <br>
+    - Click "Go to Instance Page" when it becomes available and starts flashing. <br>
+    <img src="images/go_to_instance_page.png" alt="Alt text" width="500"> <br>
+    - You should now be on the instance page, as shown below. <br>
+        - It might take a few minutes before you see the 'Running' status and button "Open Notebook" starts flashing. <br>
     <img src="images/instance_page_1.png" alt="Alt text" width="500">
 
-### local terminal ssh
+### Required Utilities
 In your local terminal where you installed Brev CLI:
 - Log in to your Brev account by following the prompts.
     ```
@@ -80,8 +82,8 @@ In your local terminal where you installed Brev CLI:
 - Generate NGC API Key.
     - Open a web browser and go to https://org.ngc.nvidia.com/setup/api-key.
     - You might be prompted to login or to register for a free account.
-    - Click "+ Generate API Key" and then copy & paste the key to somewhere local.
-    <img src="images/gen_API_Key.png" alt="Alt text" width="500">
+    - Click "+ Generate API Key" and then copy & paste the key to somewhere local. <br>
+    <img src="images/gen_API_Key.png" alt="Alt text" width="500"> 
 
 - Set up NGC CLI by following the section [NGC CLI Tool](https://docs.nvidia.com/nim/bionemo/alphafold2/latest/prerequisites.html#ngc-cli-tool) in the AF2 NIM doc. Please refer to this doc for explanation. I have put specific commands below:
     ```
@@ -100,7 +102,7 @@ In your local terminal where you installed Brev CLI:
     ```
     ngc config set 
     ```   
-    <img src="images/ngc_config_set.png" alt="Alt text" width="500">
+    <img src="images/ngc_config_set.png" alt="Alt text" width="500"> <br>
 
     
     For the command below, 
@@ -109,7 +111,7 @@ In your local terminal where you installed Brev CLI:
     ```
     docker login nvcr.io
     ```
-    <img src="images/docker_login_nvcr.png" alt="Alt text" width="500">
+    <img src="images/docker_login_nvcr.png" alt="Alt text" width="500"> <br>
 
     List available NIMs, e.g., the AI models originally developed by deepmind:
     ```
@@ -117,7 +119,7 @@ In your local terminal where you installed Brev CLI:
     ```
     <img src="images/list_avail_nims.png" alt="Alt text" width="500">
 
-### deploy AF2 NIM
+### Deploy AF2 NIM
 - Set up the NIM cache
     - Create the NIM cache directory
         ```
