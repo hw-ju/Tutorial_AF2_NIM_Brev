@@ -50,8 +50,9 @@ Create an account on Brev if you haven't already. You can do this by clicking th
     - You should now be on the instance page, as shown below. <br>
         - It might take a few minutes before you see the 'Running' status and button "Open Notebook" starts flashing.
         - Under the "Container" tab, you can view the log while your instance is being built. <br>
-    <img src="images/building.png" alt="Alt text" width="500">        
-    <!-- <img src="images/instance_page_1.png" alt="Alt text" width="500"> -->
+    <img src="images/building.png" alt="Alt text" width="500">
+        - When the instance is ready, as indicated by a shaka symbol in the building log, proceed to the next step.       
+    <img src="images/instance_ready.png" alt="Alt text" width="500"> 
 
 ### Required Utilities
 In your local terminal where you installed Brev CLI:
