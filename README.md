@@ -6,7 +6,7 @@ A step-by-step tutorial for deploying and using NVIDIA AlphaFold2 NIM on NVIDIA 
 This tutorial mainly combines instructions from [Deploying NIMs on Brev](https://docs.nvidia.com/brev/latest/deploying-nims.html) section of the Brev doc and [Quickstart Guide](https://docs.nvidia.com/nim/bionemo/alphafold2/latest/quickstart-guide.html) section of AF2 NIM doc. For more details, please refer to those docs. It is also highly recommended to go through the rest of Brev doc and AF2 NIM doc.
 
 ### Creat Brev Account
-Create an account on Brev if you haven't already. You can do this by clicking the “Create an account” button in the top right corner of the [Brev Console](https://console.brev.dev/org/org-2tcmRZuGMBx9Wlh2bxmuIdGb6UN/environments).
+Create an account on Brev if you haven't already. You can do this by clicking the “Create an account” button in the top right corner of the Brev Console [console.brev.dev](https://console.brev.dev/org/org-2tcmRZuGMBx9Wlh2bxmuIdGb6UN/environments).
 
 ### Install Brev CLI
 - Follow [Installation Instructions](https://docs.nvidia.com/brev/latest/brev-cli.html#installation-instructions) for Mac, Linux and Windows.
@@ -136,6 +136,9 @@ In your local terminal where you installed Brev CLI:
         <img src="images/chmod_cache.png" alt="Alt text" width="500">
 
 - Pull the AF2 NIM container. Might take about five minutes.
+    ```
+    export NGC_API_KEY=<Enter your NGC key here>
+    ```
     ```
     docker pull nvcr.io/nim/deepmind/alphafold2:2.1.0
     ```
