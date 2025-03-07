@@ -1,0 +1,65 @@
+"timestamp": "2025-03-07 01:06:24,206", "level": "INFO", "message": "nim_api_post_call_protein_structure_alphafold2_predict_structure_from_sequence_post called"
+"timestamp": "2025-03-07 01:06:24,206", "level": "INFO", "message": "nim_api_post_call_protein_structure_alphafold2_predict_msa_from_sequence_post called"
+"timestamp": "2025-03-07 01:06:24,206", "level": "INFO", "message": "Beginning MSA."
+{"timestamp": "2025-03-07T01:06:24.206908", "level": "INFO", "logger": "foldnim_wrappers", "message": "Beginning query."}
+INFO:foldnim_wrappers:Trimming MSA to at most 10000 sequences.
+ 
+            JackHMMerManager.query, before run query
+            force_non_hpc_jackhmmer=None
+            Constants.jackhmmer_binary_path=/usr/local/bin/jackhmmer
+            Constants.hpc_jackhmmer_binary_path=/usr/bin/hpc_jackhmmer_1toM
+            binary_path=/usr/bin/hpc_jackhmmer_1toM
+            e_value=0.0001,
+            bit_score=None,
+            n_iter=1,
+            database_path=/opt/nim/.cache/ngc/hub/models--nim--deepmind--alphafold2-data/snapshots/1.2.0/uniref90/uniref90.fasta,
+            
+ 
+            JackHMMerManager.query, after run query
+            force_non_hpc_jackhmmer=None
+            Constants.jackhmmer_binary_path=/usr/local/bin/jackhmmer
+            Constants.hpc_jackhmmer_binary_path=/usr/bin/hpc_jackhmmer_1toM
+            binary_path=/usr/bin/hpc_jackhmmer_1toM
+            e_value=0.0001,
+            bit_score=None,
+            n_iter=1,
+            database_path=/opt/nim/.cache/ngc/hub/models--nim--deepmind--alphafold2-data/snapshots/1.2.0/uniref90/uniref90.fasta,
+            
+{"timestamp": "2025-03-07T01:10:16.766377", "level": "INFO", "logger": "foldnim_wrappers", "message": "Trimming MSA to at most 10000 sequences."}
+INFO:foldnim_wrappers:Trimming took 0.0003867149353027344 seconds.
+{"timestamp": "2025-03-07T01:10:16.767073", "level": "INFO", "logger": "foldnim_wrappers", "message": "Trimming took 0.0003867149353027344 seconds."}
+"timestamp": "2025-03-07 01:10:16,767", "level": "INFO", "message": "Completed MSA."
+INFO:nimlib.nim_inference_api_builder.api:Completed MSA.
+INFO:nimlib.nim_inference_api_builder.api:Beginning template search.
+"timestamp": "2025-03-07 01:10:16,769", "level": "INFO", "message": "Beginning template search."
+"timestamp": "2025-03-07 01:10:28,628", "level": "INFO", "message": "Completed template search in 11.860597222999786 seconds."
+INFO:nimlib.nim_inference_api_builder.api:Completed template search in 11.860597222999786 seconds.
+INFO:nimlib.nim_inference_api_builder.api:nim_api_post_call_protein_structure_alphafold2_predict_structure_from_msa_post called
+"timestamp": "2025-03-07 01:10:28,628", "level": "INFO", "message": "nim_api_post_call_protein_structure_alphafold2_predict_structure_from_msa_post called"
+"timestamp": "2025-03-07 01:10:28,678", "level": "INFO", "message": "Created sequence features in 0.0002079010009765625 seconds."
+"timestamp": "2025-03-07 01:10:28,678", "level": "INFO", "message": "Created MSA features in 0.00011706352233886719."
+INFO:nimlib.nim_inference_api_builder.api:Created sequence features in 0.0002079010009765625 seconds.
+INFO:nimlib.nim_inference_api_builder.api:Created MSA features in 0.00011706352233886719.
+INFO:nimlib.nim_inference_api_builder.api:Created template features in 9.153391122817993 seconds.
+"timestamp": "2025-03-07 01:10:37,838", "level": "INFO", "message": "Created template features in 9.153391122817993 seconds."
+Running 1 predictions using model preset [monomer] and num_ensemble 1. 
+Models collected: model_1,model_2,model_3,model_4,model_5
+Have 5 models: ['model_1_pred_0', 'model_2_pred_0', 'model_3_pred_0', 'model_4_pred_0', 'model_5_pred_0']
+"timestamp": "2025-03-07 01:10:53,333", "level": "INFO", "message": "Beginning structural prediction module."
+INFO:nimlib.nim_inference_api_builder.api:Beginning structural prediction module.
+INFO:nimlib.nim_inference_api_builder.api:Completed structural prediction in 509.69501781463623 seconds.
+INFO:nimlib.nim_inference_api_builder.api:Running structure relaxation.
+Running model model_1_pred_0 on /tmp/f553cac8-faf0-11ef-9a49-f2e0285e2570.fasta
+Total JAX model model_1_pred_0 on /tmp/f553cac8-faf0-11ef-9a49-f2e0285e2570.fasta predict time (includes compilation time): 132.77368760108948 seconds.
+Running model model_2_pred_0 on /tmp/f553cac8-faf0-11ef-9a49-f2e0285e2570.fasta
+Total JAX model model_2_pred_0 on /tmp/f553cac8-faf0-11ef-9a49-f2e0285e2570.fasta predict time (includes compilation time): 108.059805393219 seconds.
+Running model model_3_pred_0 on /tmp/f553cac8-faf0-11ef-9a49-f2e0285e2570.fasta
+Total JAX model model_3_pred_0 on /tmp/f553cac8-faf0-11ef-9a49-f2e0285e2570.fasta predict time (includes compilation time): 87.74413442611694 seconds.
+Running model model_4_pred_0 on /tmp/f553cac8-faf0-11ef-9a49-f2e0285e2570.fasta
+Total JAX model model_4_pred_0 on /tmp/f553cac8-faf0-11ef-9a49-f2e0285e2570.fasta predict time (includes compilation time): 81.64943766593933 seconds.
+Running model model_5_pred_0 on /tmp/f553cac8-faf0-11ef-9a49-f2e0285e2570.fasta
+Total JAX model model_5_pred_0 on /tmp/f553cac8-faf0-11ef-9a49-f2e0285e2570.fasta predict time (includes compilation time): 84.74465489387512 seconds.
+"timestamp": "2025-03-07 01:19:23,028", "level": "INFO", "message": "Completed structural prediction in 509.69501781463623 seconds."
+"timestamp": "2025-03-07 01:19:23,029", "level": "INFO", "message": "Running structure relaxation."
+INFO:nimlib.nim_inference_api_builder.api:Completed relaxation.
+"timestamp": "2025-03-07 01:19:31,334", "level": "INFO", "message": "Completed relaxation."
