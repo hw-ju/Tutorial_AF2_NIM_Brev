@@ -156,16 +156,31 @@ In your local terminal where you installed Brev CLI:
     ```
     <img src="images/nohup.png" alt="Alt text" width="500">
 
-- Monitor the ouput log of the running NIM container.
+- Monitor the log of the running NIM container.
     ```
     tail -f af2_nim.log
     ```
-    <img src="images/first_run_log.png" alt="Alt text" width="500">
+    <img src="images/first_run_log.png" alt="Alt text" width="500"> <br>
+
+    You can quit monitoring the log anytime by pressing `Ctrl + C`. <br>
+    To re-monitor the log, run the tail command above again.
 
     - The first time you run the AF2 NIM container, the log will hang at the status shown in the screenshot above for a long time. The APIs will take approximately 3–4 hours to become ready due to the downloading of large databases exceeding 1TB. 
     - The screenshot below indicates when the APIs are ready. <br>
     <img src="images/nim_ready.png" alt="Alt text" width="500">
 
+- Delete the NIM container when you're done with calling the NIM APIs.
+    - Get the ID of the running NIM container <br>
+    ```
+    docker ps
+    ```
+    <img src="images/docker_ps.png" alt="Alt text" width="500"> <br>
+
+    - Kill the running NIM contaienr <br>
+    ```
+    docker kill <container_ID>
+    ```
+    <img src="images/docker_kill.png" alt="Alt text" width="500"> <br>
 
 - `docker run` the NIM container **after the first run**.
     After the first run, the model weights are already downloaded. Pass `NIM_DISABLE_MODEL_DOWNLOAD=True` as an environment variable to the container to speed up the startup (almost instant startup).
@@ -187,7 +202,7 @@ In your local terminal where you installed Brev CLI:
 - You should now be directed to a Jupyter Lab that appears in your web browser. If it doesn’t load, try refreshing the page. <br>
 Close up the benign error if it pops up. <br>
 <img src="images/path_not_found.png" alt="Alt text" width="300"> <br>
-Double click the tutorial Jupyter Notebook in the left panel to open it up. <br>
+Double click the tutorial Jupyter Notebook `call_API.ipynb` in the left panel to open it up. <br>
 <img src="images/click_ipynb.png" alt="Alt text" width="500"> <br>
 - You're ready to run the tutorial Jupyter Notebook. <br>
 <img src="images/ready.png" alt="Alt text" width="500">
