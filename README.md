@@ -177,7 +177,7 @@ In your local terminal where you installed Brev CLI:
     - The screenshot below indicates when the APIs are ready. <br>
     <img src="images/nim_ready.png" alt="Alt text" width="500">
 
-- Delete the NIM container when you're done with calling the NIM APIs in the [tutorial Jupyter Notebook](call_API.ipynb).
+- Delete the NIM container when you're done with calling the NIM APIs in the section [Run Tutorial Jupyter Notebook - call AF2 NIM APIs](#run-tutorial-jupyter-notebook---call-af2-nim-apis).
     - Get the ID of the running NIM container <br>
     ```
     docker ps
