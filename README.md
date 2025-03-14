@@ -184,7 +184,7 @@ In your local terminal where you installed Brev CLI:
     ```
     <img src="images/docker_ps.png" alt="Alt text" width="500"> <br>
 
-    - Kill the running NIM contaienr <br>
+    - Kill the running NIM container <br>
     ```
     docker kill <container_ID>
     ```
